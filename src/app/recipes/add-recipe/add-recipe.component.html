@@ -1,0 +1,24 @@
+<mat-card class="recipe-card">
+  <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
+    <mat-form-field class="form-field">
+      <mat-label>Recipe Name</mat-label>
+      <input matInput formControlName="name" placeholder="Enter recipe name">
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Category</mat-label>
+      <mat-select formControlName="category">
+        <mat-option value="Breakfast">Breakfast</mat-option>
+        <mat-option value="Lunch">Lunch</mat-option>
+        <mat-option value="Dinner">Dinner</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="form-field">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description" placeholder="Enter recipe description"></textarea>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Add Recipe</button>
+  </form>
+</mat-card>

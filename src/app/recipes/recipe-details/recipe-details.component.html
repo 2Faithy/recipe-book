@@ -1,0 +1,31 @@
+<mat-card class="recipe-card">
+  <mat-card-header>
+    <mat-card-title>{{ recipe.name }}</mat-card-title>
+    <mat-card-subtitle>{{ recipe.category }}</mat-card-subtitle>
+  </mat-card-header>
+
+  <img mat-card-image [src]="recipe.imageUrl" alt="{{ recipe.name }}" class="recipe-image">
+
+  <mat-card-content>
+    <p>{{ recipe.description }}</p>
+    
+    <div class="ingredients">
+      <p><strong>Ingredients:</strong></p>
+      <ul>
+        <li *ngFor="let ingredient of recipe.ingredients">{{ ingredient }}</li>
+      </ul>
+    </div>
+    
+    <div class="steps">
+      <p><strong>Steps:</strong></p>
+      <ol>
+        <li *ngFor="let step of recipe.steps">{{ step }}</li>
+      </ol>
+    </div>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-button color="primary" (click)="shareRecipe()">Share</button>
+    <button mat-button color="accent" (click)="likeRecipe()">Like</button>
+  </mat-card-actions>
+</mat-card>

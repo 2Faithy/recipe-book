@@ -1,0 +1,77 @@
+/* Define the custom color variables */
+:root {
+    --primary-color: #FF6F61;  /* Warm red */
+    --secondary-color: #FFEB3B;  /* Cheerful yellow */
+    --accent-color: #8BC34A;  /* Fresh green */
+    --background-color: #FFF8E1;  /* Light creamy beige */
+  }
+  
+  
+  /* Styling the individual recipe card */
+  .recipe-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+  }
+  
+  /* Hover effect for card */
+  .recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Title Styling */
+  mat-card-title {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary-color);  /* Warm red for title */
+    margin-bottom: 10px;
+  }
+  
+  /* Subtitle Styling */
+  mat-card-subtitle {
+    font-size: 1.2rem;
+    color: var(--accent-color);  /* Fresh green for subtitle */
+    margin-bottom: 10px;
+  }
+  
+  /* Content Styling */
+  mat-card-content {
+    font-size: 1rem;
+    color: #2c3e50;
+    line-height: 1.5;
+    margin-bottom: 15px;
+  }
+  
+  /* Button Styling */
+  mat-card-actions button {
+    background-color: var(--primary-color);  /* Warm red for button */
+    color: white;
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  /* Button hover effect */
+  mat-card-actions button:hover {
+    background-color: var(--secondary-color);  /* Cheerful yellow for hover */
+    transform: scale(1.05);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    mat-grid-list {
+      grid-template-columns: 1fr !important;
+    }
+  
+    mat-card {
+      margin-bottom: 20px;
+    }
+  }
+  
